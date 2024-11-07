@@ -1,0 +1,109 @@
+.header {
+	$self: &;
+
+	&__inner {
+		display: flex;
+		align-items: center;
+		height: 120px;
+	}
+
+	&__logo {
+		display: block;
+		text-decoration: none;
+		margin-right: auto;
+
+		svg {
+			display: block;
+		}
+	}
+
+	&__navi {
+		display: flex;
+		align-items: center;
+	}
+
+	&__close {
+		@extend %reset-button;
+		width: 24px;
+		height: 24px;
+		display: none;
+
+		svg {
+			display: block;
+			fill: #fff;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__menu {
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu-links {
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu-link {
+		text-decoration: none;
+		color: #fff;
+	}
+
+	&__menu-util {
+		display: flex;
+		align-items: center;
+	}
+
+	&__menu-enter {
+		display: block;
+		text-decoration: none;
+		flex-shrink: 0;
+		width: 27px;
+		height: 32px;
+
+		svg {
+			display: block;
+			fill: #fff;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__menu-exit {
+		flex-shrink: 0;
+		width: 27px;
+		height: 32px;
+
+		svg {
+			display: block;
+			fill: #f00;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+
+	&__menu-search {
+
+	}
+
+	&__toggle {
+		@extend %reset-button;
+		flex-shrink: 0;
+		width: 40px;
+		height: 35px;
+		display: none;
+
+		svg {
+			display: block;
+			fill: #fff;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+}
