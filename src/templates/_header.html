@@ -1,6 +1,6 @@
 <header class="header @@if(this.mod){header_@@mod}" data-scroll-lock-fill-gap>
 	<div class="header__inner container">
-		<a class="header__logo" href="./"><img src="./images/logo.svg" alt=""></a>
+		<a class="header__logo" href="./"><svg><use xlink:href="#icon-logo"></use></svg></a>
 		<div class="header__navi">
 			<button class="header__close"><svg><use xlink:href="#icon-close"></use></svg></button>
 			<div class="header__menu" data-scroll-lock-scrollable>
@@ -13,12 +13,14 @@
 					<a class="header__menu-link" href="./">Аккаунт</a>
 				</div>
 				<div class="header__menu-util">
+					<form action="./" class="header__menu-search search">
+						<div class="search__inner">
+							<input type="text" value="">
+							<input type="submit" value="">
+						</div>
+					</form>
 					<a class="header__menu-enter" href="./"><svg><use xlink:href="#icon-enter"></use></svg></a>
 					<a class="header__menu-exit" href="./"><svg><use xlink:href="#icon-exit"></use></svg></a>
-					<form action="./" class="header__menu-search search">
-						<input type="text">
-						<button type="submit"><svg><use xlink:href="#icon-zoom"></use></svg></a></button>
-					</form>
 				</div>
 			</div>
 		</div>

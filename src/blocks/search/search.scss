@@ -1,22 +1,78 @@
 .search {
 	$self: &;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	height: 40px;
+	width: 40px;
+	position: relative;
+	cursor: pointer;
+	
+	@include media('<=sm') {
+		position: static;
+		width: 100%;
+	}
+
+	&.opened {
+		@include media('>sm') {
+			#{$self}__inner {
+				width: 240px;
+				border-color: rgb(var(--accent));
+			}
+	
+			input[type='text'] {
+				display: block;
+			}
+	
+			input[type='submit'] {
+				display: block;
+			}
+		}
+	}
+	
+	&__inner {
+		box-sizing: border-box;
+		border: 1px solid transparent;
+		border-radius: 6px;
+		position: absolute;
+		right: 0px;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		max-width: calc(100vw - var(--gap) * 2);
+		background: url('#{$images-path}zoom.svg') top 7px right 7px / 24px 24px no-repeat #111;
+		overflow: hidden;
+		transition: width 0.3s, border-color 0.3s;
+		display: flex;
+
+		@include media('<=sm') {
+			position: static;
+			border-color: #555;
+		}
+	}
 
 	input[type='text'] {
 		@extend %reset-input;
+		color: #fff;
+		font-size: 15px;
+		padding-left: 10px;
+		flex-grow: 1;
+		display: none;
+
+		@include media('<=sm') {
+			display: block;
+		}
 	}
 
-	button[type='submit'] {
+	input[type='submit'] {
 		@extend %reset-button;
 		flex-shrink: 0;
-		width: 26px;
-		height: 26px;
-
-		svg {
+		width: 40px;
+		height: 100%;
+		display: none;
+		
+		@include media('<=sm') {
 			display: block;
-			fill: #fff;
-			width: 100%;
-			max-width: 100%;
-			max-height: 100%;
 		}
 	}
 }
