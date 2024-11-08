@@ -9,7 +9,7 @@
 	&__logo {
 		display: block;
 		max-width: 170px;
-		margin: 0 auto 50px;
+		margin: 0 auto 40px;
 
 		svg {
 			fill: #fff;
@@ -27,7 +27,7 @@
 		color: #fff;
 		font-size: 20px;
 		max-width: 620px;
-		margin: 0 auto 40px;
+		margin: 0 auto 30px;
 		
 		@include media('<=xxs') {
 			flex-flow: column nowrap;

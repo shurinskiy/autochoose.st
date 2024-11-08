@@ -36,7 +36,7 @@ import { menuToggle } from "../../js/libs/menuToggle";
 	});
 	
 	window.addEventListener('scroll', () => {
-		header.classList[window.scrollY > 30 ? 'remove': 'add']('header_scrolled');
+		header.classList[window.scrollY < 30 ? 'remove': 'add']('header_scrolled');
 	});
 
 	// открытие и закрытие меню, свайпом на мобильных устройствах
