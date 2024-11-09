@@ -4,7 +4,6 @@
 	position: relative;
 	z-index: 1;
 	height: 770px;
-	margin-bottom: 60px;
 	
 	@include media('<=xlg') {
 		height: 600px;
@@ -40,18 +39,54 @@
 	
 	&__title {
 		color: #fff;
-		font-weight: 700;
-		font-size: 60px;
-		@include range(60px, 32px, 1280px, 480px);
-		margin-bottom: 40px;
+		font-weight: 900;
+		font-size: 80px;
+		line-height: 1.1;
+		@include range(80px, 36px, 1280px, 360px);
+		margin-bottom: 30px;
+		text-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+
+		&::after {
+			display: block;
+			content: '';
+			width: 100%;
+			max-width: 200px;
+			height: 2px;
+			background-color: #fff;
+			margin-top: 20px;
+		}
 	}
 	
 	&__note {
-
+		color: #fff;
+		font-family: "BS", sans-serif;
+		font-size: 18px;
+		margin-bottom: 28px;
+			
+		@include media('<=sm') {
+			font-size: 16px;
+		}
 	}
 
 	&__more {
 		pointer-events: auto;
+
+		&.button {
+			height: 80px;
+			width: 100%;
+			max-width: 340px;
+			
+			@include media('<=lg') {
+				height: 70px;
+				max-width: 340px;
+			}
+			
+			@include media('<=sm') {
+				height: 55px;
+				max-width: 250px;
+				font-size: 20px;
+			}
+		}
 	}
 
 	&__pagination {

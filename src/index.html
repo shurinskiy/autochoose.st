@@ -1,7 +1,7 @@
 @@include("_head.html", {"id":"home"}) 
 @@include("_header.html") 
 
-<section class="hero">
+<section class="hero mb2">
 	<div class="hero__slider swiper">
 		<div class="swiper-wrapper">
 			<div class="hero__slide swiper-slide" href="./">
@@ -21,9 +21,49 @@
 	<div class="hero__content container">
 		<h1 class="hero__title">Новый Lexus RX<br/> в Минске</h1>
 		<p class="hero__note">Доступен в наличии и под заказ</p>
-		<a class="hero__more button" href="./">Подробнее</a>
+		<a class="hero__more button button_arrowed" href="./">Подробнее</a>
 	</div>
 	<div class="hero__pagination"></div>
+</section>
+
+<section class="news">
+	<div class="news__inner container">
+		<h2 class="news__title title mb2">Новинки</h2>
+		<div class="news__items mb1">
+			@@include('_n-card.html', {
+				cls: 'news__item',
+				image: 'card-image-1.webp',
+				name: 'Lexus NX 300',
+				set: true
+			})
+			@@include('_n-card.html', {
+				cls: 'news__item',
+				image: 'card-image-2.webp',
+				name: 'Lexus NX 300'
+			})
+			@@include('_n-card.html', {
+				cls: 'news__item',
+				image: 'card-image-3.webp',
+				name: 'Lexus NX 300'
+			})
+			@@include('_n-card.html', {
+				cls: 'news__item',
+				image: 'card-image-4.webp',
+				name: 'Lexus NX 300'
+			})
+			@@include('_n-card.html', {
+				cls: 'news__item',
+				image: 'card-image-5.webp',
+				name: 'Lexus NX 300',
+				set: true
+			})
+			@@include('_n-card.html', {
+				cls: 'news__item',
+				image: 'card-image-6.webp',
+				name: 'Lexus NX 300'
+			})
+		</div>
+	</div>
 </section>
 
 

@@ -1,0 +1,8 @@
+.title {
+	$self: &;
+	color: #fff;
+	font-family: "BS", sans-serif;
+	font-weight: 700;
+	font-size: 38px;
+	@include range(38px, 28px, 1280px, 360px);
+}

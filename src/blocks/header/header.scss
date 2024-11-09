@@ -1,5 +1,6 @@
 .header {
 	$self: &;
+	box-sizing: border-box;
 	position: fixed;
 	z-index: 12;
 	top: 0;
@@ -9,6 +10,7 @@
 	background-color: #111;
 	border-bottom: 1px solid transparent;
 	transition: border-color 0.3s;
+	font-family: "BS", sans-serif;
 	
 	@include media('<=lg') {
 		height: 90px;

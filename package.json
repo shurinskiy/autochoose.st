@@ -62,7 +62,7 @@
 		"from": "src/**/*.html",
 		"to": "src/blocks",
 		"js": "src/js/blocks.js",
-		"omit": "@@,js-,active,opened,svg,sprite,icon-box,swiper"
+		"omit": "@@,js-,active,opened,svg,sprite,icon-box,swiper,mb"
 	},
 	"dependencies": {
 		"scroll-lock": "^2.1.5",

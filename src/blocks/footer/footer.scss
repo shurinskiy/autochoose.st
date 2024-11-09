@@ -1,9 +1,10 @@
 .footer {
 	$self: &;
+	font-family: "BS", sans-serif;
 
 	&__inner {
 		max-width: 970px;
-		padding-bottom: 40px;
+		padding: 20px 0 40px;
 	}
 
 	&__logo {

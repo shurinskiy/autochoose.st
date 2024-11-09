@@ -1,4 +1,29 @@
 .button {
 	$self: &;
+	@extend %reset-button;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: fit-content;
+	background-color: rgb(var(--accent));
+	font-family: "BS", sans-serif;
+	line-height: 1.0;
+	font-size: 24px;
+	color: #111;
+	border-radius: 6px;
+	padding: 12px 30px 10px 30px;
+	height: 65px;
 
+	&_arrowed {
+
+		&::after {
+			display: block;
+			content: '';
+			width: 44px;
+			height: 22px;
+			background: url('#{$images-path}arrow.svg') center / contain no-repeat transparent;
+			filter: invert(1);
+			margin-left: 20px;
+		}
+	}
 }
