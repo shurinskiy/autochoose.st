@@ -2,7 +2,8 @@
 	$self: &;
 	display: block;
 	box-sizing: border-box;
-	border: 1px solid rgb(var(--accent));
+	// border: 1px solid rgb(var(--accent));
+	border: 1px solid #5d5d5d;
 	padding: 16px 15px;
 	border-radius: 10px;
 
