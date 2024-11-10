@@ -15,15 +15,7 @@ import { rangeDoubleTweaker } from "../../js/libs/rangeDoubleTweaker";
 			}); */
 		});
 
-		filter.querySelector('.filter__range')
-		rangeDoubleTweaker(filter.querySelector('.filter__range'), {
-			maxPrice: 10000,
-			startMin: 2500,
-			startMax: 7500,
-			input: false,
-			step: 100,
-			gap: 1000
-		});
+		rangeDoubleTweaker(filter.querySelector('.filter__range'), { input: true });
 	});
 
 })();

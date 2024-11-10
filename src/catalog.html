@@ -13,16 +13,14 @@
 					<div class="catalog__filter filter opened">
 						<h3 class="filter__title">Цена</h3>
 						<fieldset class="filter__body">
-							<div class="filter__range">
-								<input type="range">
-								<input type="range">
-							</div>
-						</fieldset>
-					</div>
-					<div class="catalog__filter filter opened">
-						<h3 class="filter__title">Еще одна цена</h3>
-						<fieldset class="filter__body">
-							<div class="filter__range">
+							<div 
+								class="filter__range" 
+								data-range-start-min="20000" 
+								data-range-start-max="80000" 
+								data-range-max="100000"
+								data-range-step="1000"
+								data-range-gap="20000"
+							>
 								<input type="range">
 								<input type="range">
 							</div>
@@ -48,6 +46,49 @@
 							<label class="filter__checkbox"><input type="checkbox" value=""><span>Родстер</span></label>
 						</fieldset>
 					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Год</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2019</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2020</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2021</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2022</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2023</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2024</span></label>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Тип топлива</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Бензин</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Дизель</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Гибрид</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Электро</span></label>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Модель авто</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Camry</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Lqnd cruiser</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Spider</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Rav-4</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>ES 350</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>NX 350</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>LX 570</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>LC 500</span></label>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Объем, л</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>1.4</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2.0</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>2.5</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>4.0</span></label>
+						</fieldset>
+					</div>
+					<button class="catalog__apply button">Применить</button>
 				</form>
 			</aside>
 			<div class="catalog__items">

@@ -60,6 +60,15 @@
 
 	}
 	
+	&__apply {
+
+		&.button {
+			height: 58px;
+			font-size: 22px;
+			width: 100%;
+		}
+	}
+
 	&__items {
 		grid-column: span 1;
 		display: grid;
