@@ -30,7 +30,7 @@
 * @вызов:
 * 
 import { rangeDoubleTweaker } from "../../js/libs/rangeDoubleTweaker";
-rangeDoubleTweaker(document.querySelectorAll('.someblock'), {
+rangeDoubleTweaker(document.querySelector('.someblock'), {
 	maxPrice: 10000,
 	startMin: 2500,
 	startMax: 7500,
@@ -48,9 +48,9 @@ export const rangeDoubleTweaker = (item, options = {}) => {
 
 			this.options = {
 				class: 'range',
-				startMin: item.dataset.startMin || 1000,
-				startMax: item.dataset.startMax || 7500,
-				maxPrice: item.dataset.priceMax || 10000,
+				startMin: item.dataset?.startMin || 1000,
+				startMax: item.dataset?.startMax || 7500,
+				maxPrice: item.dataset?.priceMax || 10000,
 				input: true,
 				step: 100,
 				gap: 1000,

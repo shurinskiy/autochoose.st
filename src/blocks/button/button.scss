@@ -7,10 +7,12 @@
 	width: fit-content;
 	background-color: rgb(var(--accent));
 	font-family: "BS", sans-serif;
+	white-space: nowrap;
 	line-height: 1.0;
 	font-size: 24px;
 	color: #111;
 	border-radius: 6px;
+	border: 1px solid transparent;
 	padding: 12px 30px 10px 30px;
 	height: 65px;
 
@@ -25,5 +27,15 @@
 			filter: invert(1);
 			margin-left: 20px;
 		}
+	}
+
+	&_dark#{&}_arrowed {
+		filter: none;
+	}
+
+	&_dark {
+		background-color: #111;
+		border-color: rgb(var(--accent));
+		color: #fff;
 	}
 }

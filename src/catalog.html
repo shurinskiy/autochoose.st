@@ -1,0 +1,130 @@
+@@include("_head.html") 
+@@include("_header.html") 
+
+<main class="catalog mb1">
+	<div class="catalog__inner container">
+		<div class="catalog__top mb3">
+			<h2>Фильтр по параметрам</h2>
+			<a class="catalog__add button button_dark" href="./">Добавить авто</a>
+		</div>
+		<div class="catalog__content">
+			<aside class="catalog__aside">
+				<form class="catalog__filters" action="./">
+					<div class="catalog__filter filter opened">
+						<h3 class="filter__title">Цена</h3>
+						<fieldset class="filter__body">
+							<div class="filter__range">
+								<input type="range">
+								<input type="range">
+							</div>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter opened">
+						<h3 class="filter__title">Еще одна цена</h3>
+						<fieldset class="filter__body">
+							<div class="filter__range">
+								<input type="range">
+								<input type="range">
+							</div>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Марка</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Mercedes benz</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Bmw</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Lexus</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value="" checked><span>Toyota</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Ferrari</span></label>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Тип кузова</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Кроссовер</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value="" checked><span>Внедорожник</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Седан</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Купе</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Родстер</span></label>
+						</fieldset>
+					</div>
+				</form>
+			</aside>
+			<div class="catalog__items">
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-1.webp',
+					name: 'Lexus NX 300 base 2024',
+					price: '18000',
+					set: true
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-2.webp',
+					name: 'Lexus UX 200 2024',
+					price: '19000'
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-3.webp',
+					name: 'Lexus RX 350 AWD 2024',
+					price: '15000'
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-4.webp',
+					name: 'Lexus NX 300 base 2024',
+					price: '30000'
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-5.webp',
+					name: 'Lexus LX 570 2024',
+					price: '50000',
+					set: true
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-6.webp',
+					name: 'Lexus ES 200 2024',
+					price: '43000'
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-7.webp',
+					name: 'Lexus NX 300 base 2024',
+					price: '18000'
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-8.webp',
+					name: 'Lexus NX 350 base 2024',
+					price: '20000'
+				})
+				@@include('_card.html', {
+					cls: 'catalog__item',
+					detail: true,
+					image: 'card-image-9.webp',
+					name: 'Lexus LS 500 base 2024',
+					price: '23000'
+				})
+				<div class="catalog__pagination pagination">
+					<a class="pagination__link active" href="./">1</a>
+					<a class="pagination__link" href="./">2</a>
+					<a class="pagination__link" href="./">3</a>
+					<a class="pagination__link" href="./">4</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</main>
+
+@@include("_bottom.html")

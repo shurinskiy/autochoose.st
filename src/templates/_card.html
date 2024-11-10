@@ -1,0 +1,18 @@
+<div class="@@if(this.cls){@@cls} card @@if(this.detail) {card_detail}">
+	<a class="card__image" href="./"><img src="@@if(this.image){./images/@@image}" alt=""></a>
+	<div class="card__body">
+		<h3 class="card__title">@@name</h3>
+		@@if(this.detail) {
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$@@price</div>
+		}
+	</div>
+	<button class="card__favorite @@if(this.set){card__favorite_set}">
+		<svg><use xlink:href="#icon-fav"></use></svg>
+	</button>
+</div>

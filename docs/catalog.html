@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body id="home"> 
+<body > 
 <header class="header " data-scroll-lock-fill-gap>
 	<div class="header__inner container">
 		<a class="header__logo" href="./"><svg><use xlink:href="#icon-logo"></use></svg></a>
@@ -38,99 +38,228 @@
 	</div>
 </header> 
 
-<section class="hero mb2">
-	<div class="hero__slider swiper">
-		<div class="swiper-wrapper">
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-4.webp" alt="">
-			</div>
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-1.webp" alt="">
-			</div>
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-2.webp" alt="">
-			</div>
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-3.webp" alt="">
-			</div>
+<main class="catalog mb1">
+	<div class="catalog__inner container">
+		<div class="catalog__top mb3">
+			<h2>Фильтр по параметрам</h2>
+			<a class="catalog__add button button_dark" href="./">Добавить авто</a>
 		</div>
-	</div>
-	<div class="hero__content container">
-		<h1 class="hero__title">Новый Lexus RX<br/> в Минске</h1>
-		<p class="hero__note">Доступен в наличии и под заказ</p>
-		<a class="hero__more button button_arrowed" href="./">Подробнее</a>
-	</div>
-	<div class="hero__pagination"></div>
-</section>
-
-<section class="news">
-	<div class="news__inner container">
-		<h2 class="news__title title mb2">Новинки</h2>
-		<div class="news__items mb1">
-			<div class="news__item card ">
+		<div class="catalog__content">
+			<aside class="catalog__aside">
+				<form class="catalog__filters" action="./">
+					<div class="catalog__filter filter opened">
+						<h3 class="filter__title">Цена</h3>
+						<fieldset class="filter__body">
+							<div class="filter__range">
+								<input type="range">
+								<input type="range">
+							</div>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter opened">
+						<h3 class="filter__title">Еще одна цена</h3>
+						<fieldset class="filter__body">
+							<div class="filter__range">
+								<input type="range">
+								<input type="range">
+							</div>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Марка</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Mercedes benz</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Bmw</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Lexus</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value="" checked><span>Toyota</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Ferrari</span></label>
+						</fieldset>
+					</div>
+					<div class="catalog__filter filter">
+						<h3 class="filter__title">Тип кузова</h3>
+						<fieldset class="filter__body">
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Кроссовер</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value="" checked><span>Внедорожник</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Седан</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Купе</span></label>
+							<label class="filter__checkbox"><input type="checkbox" value=""><span>Родстер</span></label>
+						</fieldset>
+					</div>
+				</form>
+			</aside>
+			<div class="catalog__items">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./"><img src="./images/card-image-1.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus NX 300 base 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$18000</div>
 		
 	</div>
 	<button class="card__favorite card__favorite_set">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./"><img src="./images/card-image-2.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus UX 200 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$19000</div>
 		
 	</div>
 	<button class="card__favorite ">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./"><img src="./images/card-image-3.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus RX 350 AWD 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$15000</div>
 		
 	</div>
 	<button class="card__favorite ">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./"><img src="./images/card-image-4.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus NX 300 base 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$30000</div>
 		
 	</div>
 	<button class="card__favorite ">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./"><img src="./images/card-image-5.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus LX 570 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$50000</div>
 		
 	</div>
 	<button class="card__favorite card__favorite_set">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./"><img src="./images/card-image-6.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus ES 200 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$43000</div>
 		
 	</div>
 	<button class="card__favorite ">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
+				<div class="catalog__item card card_detail">
+	<a class="card__image" href="./"><img src="./images/card-image-7.webp" alt=""></a>
+	<div class="card__body">
+		<h3 class="card__title">Lexus NX 300 base 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$18000</div>
+		
+	</div>
+	<button class="card__favorite ">
+		<svg><use xlink:href="#icon-fav"></use></svg>
+	</button>
+</div>
+				<div class="catalog__item card card_detail">
+	<a class="card__image" href="./"><img src="./images/card-image-8.webp" alt=""></a>
+	<div class="card__body">
+		<h3 class="card__title">Lexus NX 350 base 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$20000</div>
+		
+	</div>
+	<button class="card__favorite ">
+		<svg><use xlink:href="#icon-fav"></use></svg>
+	</button>
+</div>
+				<div class="catalog__item card card_detail">
+	<a class="card__image" href="./"><img src="./images/card-image-9.webp" alt=""></a>
+	<div class="card__body">
+		<h3 class="card__title">Lexus LS 500 base 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$23000</div>
+		
+	</div>
+	<button class="card__favorite ">
+		<svg><use xlink:href="#icon-fav"></use></svg>
+	</button>
+</div>
+				<div class="catalog__pagination pagination">
+					<a class="pagination__link active" href="./">1</a>
+					<a class="pagination__link" href="./">2</a>
+					<a class="pagination__link" href="./">3</a>
+					<a class="pagination__link" href="./">4</a>
+				</div>
+			</div>
 		</div>
 	</div>
-</section>
-
+</main>
 
 <footer class="footer"> 
 	<div class="footer__inner container">
