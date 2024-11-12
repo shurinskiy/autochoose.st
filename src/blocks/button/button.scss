@@ -23,13 +23,13 @@
 			content: '';
 			width: 44px;
 			height: 22px;
-			background: url('#{$images-path}arrow.svg') center / contain no-repeat transparent;
+			background: svg-url('<svg width="66" height="31" viewBox="0 0 66 31" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M52.6863 1.35776L65.4142 14.0857C66.1953 14.8667 66.1953 16.1331 65.4142 16.9141L52.6863 29.642C51.9052 30.4231 50.6389 30.4231 49.8579 29.642C49.0768 28.861 49.0768 27.5947 49.8579 26.8136L59.1716 17.4999H0V13.4999H59.1716L49.8579 4.18619C49.0768 3.40514 49.0768 2.13881 49.8579 1.35776C50.6389 0.57671 51.9052 0.57671 52.6863 1.35776Z" fill="white"/></svg>') no-repeat center / contain transparent;
 			filter: invert(1);
 			margin-left: 20px;
 		}
 	}
 
-	&_dark#{&}_arrowed {
+	&_dark#{&}_arrowed::after {
 		filter: none;
 	}
 

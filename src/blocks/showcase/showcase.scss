@@ -1,0 +1,69 @@
+.showcase {
+	$self: &;
+
+	&__frame {
+		@include aspect-ratio(1.1, 1);
+		overflow: hidden;
+		border-radius: 5px;
+		margin-bottom: 12px;
+
+		&::after {
+			display: block;
+			content: "";
+			position: absolute;
+			z-index: 2;
+			height: 20px;
+			width: 20px;
+			background: svg-url('<svg width="21" height="21" viewBox="0 0 21 21" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M3 14.5C3 13.9477 2.55228 13.5 2 13.5H1C0.447715 13.5 0 13.9477 0 14.5V20C0 20.5523 0.447715 21 1 21H6.5C7.05228 21 7.5 20.5523 7.5 20V19C7.5 18.4477 7.05228 18 6.5 18H4C3.44772 18 3 17.5523 3 17V14.5ZM0 6.5C0 7.05228 0.447715 7.5 1 7.5H2C2.55228 7.5 3 7.05228 3 6.5V4C3 3.44772 3.44772 3 4 3H6.5C7.05228 3 7.5 2.55228 7.5 2V1C7.5 0.447715 7.05228 0 6.5 0H1C0.447715 0 0 0.447715 0 1V6.5ZM18 17C18 17.5523 17.5523 18 17 18H14.5C13.9477 18 13.5 18.4477 13.5 19V20C13.5 20.5523 13.9477 21 14.5 21H20C20.5523 21 21 20.5523 21 20V14.5C21 13.9477 20.5523 13.5 20 13.5H19C18.4477 13.5 18 13.9477 18 14.5V17ZM14.5 0C13.9477 0 13.5 0.447715 13.5 1V2C13.5 2.55228 13.9477 3 14.5 3H17C17.5523 3 18 3.44772 18 4V6.5C18 7.05228 18.4477 7.5 19 7.5H20C20.5523 7.5 21 7.05228 21 6.5V1C21 0.447715 20.5523 0 20 0H14.5Z" fill="#ffd61e"/></svg>') no-repeat center / contain transparent;
+			bottom: 30px;
+			right: 30px;
+			cursor: pointer;
+			pointer-events: none;
+		}
+	}
+
+	&__item {
+		box-sizing: border-box;
+		position: absolute;
+		top: 0; left: 0;
+		height: 100%;
+		opacity: 0;
+		transition: opacity 0.3s;
+		pointer-events: none;
+		
+		&.active {
+			pointer-events: auto;
+			cursor: pointer;
+			opacity: 1;
+		}
+
+		img {
+			display: block;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__thumbs {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+		grid-gap: 12px;
+	}
+
+	&__thumb {
+		@include aspect-ratio(1, 1);
+		position: relative;
+		border-radius: 5px;
+		outline: 2px solid transparent;
+		outline-offset: -2px;
+		transition: outline-color 0.3s;
+		background-size: cover;
+		cursor: pointer;
+		
+		&.active {
+			z-index: 1;
+			outline-color: rgb(var(--accent));
+		}
+	}
+}

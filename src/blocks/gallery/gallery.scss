@@ -1,0 +1,90 @@
+.gallery {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+
+	}
+
+	&__slider {
+		padding-left: 22px;
+		padding-right: 22px;
+		margin-left: -22px;
+		margin-right: -22px;
+		
+		@include media('<=xs') {
+			padding-left: 16px;
+			padding-right: 16px;
+			margin-left: -16px;
+			margin-right: -16px;
+		}
+	}
+
+	&__slide {
+		height: auto;
+	}
+
+	&__navi {
+
+	}
+
+	&__button {
+		@extend %reset-button;
+		position: absolute;
+		transform: translateY(-50%);
+		z-index: 2;
+		top: 50%;
+		width: 46px;
+		height: 46px;
+		overflow: hidden;
+		background-color: #111;
+		transition: background-color 0.3s, border-color 0.3s;
+		border: 1px solid rgb(var(--accent));
+		border-radius: 1000px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		
+		@include media('<=xs') {
+			width: 36px;
+			height: 36px;
+		}
+		
+		@include media('<=xxs') {
+			display: none;
+		}
+		
+		&:disabled {
+			background-color: #333;
+			border-color: #777;
+		}
+		
+		svg {
+			width: 13px;
+			height: 23px;
+			fill: #fff;
+			position: relative;
+			z-index: 2;
+			
+			@include media('<=xs') {
+				width: 11px;
+				height: 18px;
+			}
+		}
+
+		&_prev {
+			left: 0;
+
+			svg {
+				transform: rotate(180deg);
+			}
+		}
+		
+		&_next {
+			right: 0;
+		}
+	}
+}

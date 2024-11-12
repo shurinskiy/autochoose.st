@@ -65,6 +65,7 @@
 		"omit": "@@,js-,active,opened,svg,sprite,icon-box,swiper,mb"
 	},
 	"dependencies": {
+		"@fancyapps/ui": "^5.0.36",
 		"scroll-lock": "^2.1.5",
 		"swiped-events": "^1.2.0",
 		"swiper": "^11.1.14"

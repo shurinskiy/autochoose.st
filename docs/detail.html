@@ -7,7 +7,7 @@
 	<link rel="stylesheet" href="style.css"> 
 	<title></title> 
 </head> 
-<body id="home"> 
+<body > 
 <header class="header " data-scroll-lock-fill-gap>
 	<div class="header__inner container">
 		<a class="header__logo" href="./"><svg><use xlink:href="#icon-logo"></use></svg></a>
@@ -38,99 +38,200 @@
 	</div>
 </header> 
 
-<section class="hero mb2">
-	<div class="hero__slider swiper">
-		<div class="swiper-wrapper">
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-4.webp" alt="">
+<main class="detail mb1">
+	<div class="detail__inner container">
+		<div class="detail__top">
+			<div class="detail__gallery d-gallery mb1">
+				<img 
+					src="./images/detail-image-2.webp" 
+					data-src="./images/detail-image-2-large.webp"
+					data-fancybox="detail"
+					loading="lazy" 
+					alt="" 
+				>
+				<img 
+					src="./images/detail-image-1.webp" 
+					data-src="./images/detail-image-1-large.webp"
+					data-fancybox="detail"
+					loading="lazy" 
+					alt="" 
+				>
+				<img 
+					src="./images/detail-image-3.webp" 
+					data-src="./images/detail-image-3-large.webp"
+					data-fancybox="detail"
+					loading="lazy" 
+					alt="" 
+				>
+				<img 
+					src="./images/detail-image-4.webp" 
+					data-src="./images/detail-image-4-large.webp"
+					data-fancybox="detail"
+					loading="lazy" 
+					alt="" 
+				>
+				<img 
+					src="./images/detail-image-5.webp" 
+					data-src="./images/detail-image-5-large.webp"
+					data-fancybox="detail"
+					loading="lazy" 
+					alt="" 
+				>
 			</div>
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-1.webp" alt="">
+			<div class="detail__side mb1">
+				<h1 class="detail__title">LEXUS IS 300</h1>
+				<div class="detail__price">$15 000</div>
+				<div class="detail__profit">Экономия от рынка РБ: <span>-$4500</span></div>
+				<a class="detail__consult button button_dark button_arrowed" href="./">Консультация</a>
 			</div>
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-2.webp" alt="">
+		</div>
+		<div class="detail__about mb3">
+			<h2 class="title mb3">Подробнее об авто</h2>
+			<p>LEXUS IS 300 2019 года напрямую из США! Менеджеры АвтоКаргоТрейд помогут проверить, купить, доставить любое авто с аукционов Америки. Колоссальная разница от покупки машин с аукционов США (учитывая все расходы и ремонт) 20-40% от авторынка в Беларуси.</p>
+			<p>Успейте сделать ставку на аукционе и почувствуйте непревзойденное качество и комфорт LEXUS IS 300 2019. Не упускайте свой шанс воплотить свои автомобильные мечты в реальность с АвтоКаргоТрейд!</p>
+			<p>Все лоты проходят тщательную проверку, исключены ошибки в подготовке документов, полное сопровождение до передачи автомобиля клиенту.</p>
+			<p>Офис компании находиться в Минске, авто возможно доставить в любой город Беларуси.</p>
+		</div>
+		<div class="detail__tags tags">
+			<div class="tags__item">
+				<span>Год</span>
+				<span>2019</span>
 			</div>
-			<div class="hero__slide swiper-slide" href="./">
-				<img src="./images/hero-image-3.webp" alt="">
+			<div class="tags__item">
+				<span>Тип топлива</span>
+				<span>Бензин</span>
+			</div>
+			<div class="tags__item">
+				<span>ТИп кузова</span>
+				<span>Седан</span>
+			</div>
+			<div class="tags__item">
+				<span>Объем, л</span>
+				<span>2.0</span>
+			</div>
+			<div class="tags__item">
+				<span>Цвет</span>
+				<span>Зеленый</span>
+			</div>
+			<div class="tags__item">
+				<span>Привод</span>
+				<span>Задний</span>
+			</div>
+			<div class="tags__item">
+				<span>Местонахождениe</span>
+				<span>На аукционе в США</span>
 			</div>
 		</div>
 	</div>
-	<div class="hero__content container">
-		<h1 class="hero__title">Новый Lexus RX<br/> в Минске</h1>
-		<p class="hero__note">Доступен в наличии и под заказ</p>
-		<a class="hero__more button button_arrowed" href="./">Подробнее</a>
-	</div>
-	<div class="hero__pagination"></div>
-</section>
+</main>
 
-<section class="news">
-	<div class="news__inner container">
-		<h2 class="news__title title mb2">Новинки</h2>
-		<div class="news__items mb1">
-			<div class="news__item card ">
+<section class="gallery mb1">
+	<div class="gallery__inner container">
+		<h2 class="gallery__title title mb3">Похожие авто</h2>
+		<div class="gallery__slider swiper">
+			<div class="swiper-wrapper">
+				<div class="gallery__slide swiper-slide card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-1.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus NX 300 base 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$18000</div>
 		
 	</div>
-	<button class="card__favorite card__favorite_set">
+	<button class="card__favorite ">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
+				<div class="gallery__slide swiper-slide card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-2.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus UX 200 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$19000</div>
 		
 	</div>
 	<button class="card__favorite ">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
+				<div class="gallery__slide swiper-slide card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-3.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus RX 350 AWD 2024</h3>
 		
-	</div>
-	<button class="card__favorite ">
-		<svg><use xlink:href="#icon-fav"></use></svg>
-	</button>
-</div>
-			<div class="news__item card ">
-	<a class="card__image" href="./detail.html"><img src="./images/card-image-4.webp" alt=""></a>
-	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
-		
-	</div>
-	<button class="card__favorite ">
-		<svg><use xlink:href="#icon-fav"></use></svg>
-	</button>
-</div>
-			<div class="news__item card ">
-	<a class="card__image" href="./detail.html"><img src="./images/card-image-5.webp" alt=""></a>
-	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$15000</div>
 		
 	</div>
 	<button class="card__favorite card__favorite_set">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-			<div class="news__item card ">
-	<a class="card__image" href="./detail.html"><img src="./images/card-image-6.webp" alt=""></a>
+				<div class="gallery__slide swiper-slide card card_detail">
+	<a class="card__image" href="./detail.html"><img src="./images/card-image-4.webp" alt=""></a>
 	<div class="card__body">
-		<h3 class="card__title">Lexus NX 300</h3>
+		<h3 class="card__title">Lexus NX 300 base 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$30000</div>
 		
 	</div>
 	<button class="card__favorite ">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
+				<div class="gallery__slide swiper-slide card card_detail">
+	<a class="card__image" href="./detail.html"><img src="./images/card-image-5.webp" alt=""></a>
+	<div class="card__body">
+		<h3 class="card__title">Lexus LX 570 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$50000</div>
+		
+	</div>
+	<button class="card__favorite ">
+		<svg><use xlink:href="#icon-fav"></use></svg>
+	</button>
+</div>
+			</div>
+			<div class="gallery__navi">
+				<button class="gallery__button gallery__button_prev">
+					<svg><use xlink:href="#icon-next"></use></svg>
+				</button>
+				<button class="gallery__button gallery__button_next">
+					<svg><use xlink:href="#icon-next"></use></svg>
+				</button>
+			</div>
 		</div>
 	</div>
 </section>
-
 
 <footer class="footer"> 
 	<div class="footer__inner container">

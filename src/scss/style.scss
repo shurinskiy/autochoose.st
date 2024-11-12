@@ -40,6 +40,7 @@ $breakpoints: (
 
 
 @import "../../node_modules/swiper/swiper";
+@import "../../node_modules/@fancyapps/ui/dist/fancybox/fancybox";
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";

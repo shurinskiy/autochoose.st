@@ -1,0 +1,19 @@
+.fancybox {
+	$self: &;
+
+	&__content {
+		border-radius: 10px;
+		overflow: hidden;
+
+		@include media('<=sm') {
+			border-radius: 0;
+		}
+	}
+
+	&__footer {
+
+		.is-classic .is-nav-selected .f-thumbs__slide__button::after {
+			border-color: rgb(var(--accent));
+		}
+	}
+}

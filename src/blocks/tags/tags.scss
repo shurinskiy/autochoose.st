@@ -1,0 +1,53 @@
+.tags {
+	$self: &;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 20px;
+	
+	@include media('<=xs') {
+		gap: 16px;
+	}
+
+	&__item {
+		display: block;
+		box-sizing: border-box;
+		color: #fff;
+		padding: 10px 24px;
+		border: 1px solid rgb(var(--accent));
+		width: fit-content;
+		min-width: 180px;
+		border-radius: 6px;
+		
+		@include media('<=xs') {
+			min-width: 160px;
+			padding: 7px 19px;
+		}
+		
+		@include media('<=xxs') {
+			min-width: 140px;
+		}
+
+		span:nth-child(1) {
+			display: block;
+			text-transform: uppercase;
+			font-weight: 300;
+			font-size: 15px;
+			margin-bottom: 5px;
+			color: #bbb;
+			
+			@include media('<=xs') {
+				font-size: 13px;
+			}
+		}
+		
+		span:nth-child(2) {
+			display: block;
+			font-weight: 800;
+			font-size: 22px;
+			
+			@include media('<=xs') {
+				font-size: 18px;
+			}
+		}
+	}
+}

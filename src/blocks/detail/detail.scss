@@ -1,0 +1,184 @@
+.detail {
+	$self: &;
+	padding-top: 60px;
+	
+	@include media('<=xs') {
+		padding-top: 45px;
+	}
+	
+	@include media('<=xxxs') {
+		padding-top: 35px;
+	}
+
+	&__inner {
+
+	}
+
+	&__top {
+		display: flex;
+		justify-content: space-between;
+		gap: 40px;
+		
+		@include media('<=sm') {
+			gap: 24px;
+		}
+		
+		@include media('<=xs') {
+			gap: 0;
+			flex-flow: column nowrap;
+		}
+	}
+
+	&__gallery {
+		width: 100%;
+		max-width: 530px;
+
+		@include media('<=xs') {
+			order: 1;
+			max-width: none;
+		}
+	}
+	
+	&__side {
+		width: 100%;
+		max-width: 600px;
+		color: #fff;
+		display: flex;
+		flex-flow: column nowrap;
+		justify-content: center;
+
+		@include media('<=lg') {
+			display: block;
+		}
+	}
+
+	&__title {
+		margin-bottom: 30px;
+		line-height: 1.1;
+		font-size: 64px;
+		@include range(64px, 40px, 1280px, 640px);
+		
+		@include media('<=md') {
+			margin-bottom: 24px;
+		}
+		
+		@include media('<=sm') {
+			margin-bottom: 20px;
+		}
+
+		@include media('<=xs') {
+			font-size: 55px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 46px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 40px;
+		}
+	}
+	
+	&__price {
+		margin-bottom: 30px;
+		line-height: 1.1;
+		font-size: 50px;
+		@include range(50px, 32px, 1280px, 640px);
+		
+		@include media('<=sm') {
+			margin-bottom: 30px;
+		}
+
+		@include media('<=xs') {
+			font-size: 40px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 35px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 30px;
+		}
+	}
+
+	&__profit {
+		font-size: 22px;
+		margin-bottom: 60px;
+		@include range(22px, 17px, 1280px, 640px);
+		
+		@include media('<=sm') {
+			margin-bottom: 40px;
+		}
+
+		@include media('<=xs') {
+			font-size: 19px;
+		}
+
+		@include media('<=xxs') {
+			font-size: 18px;
+		}
+
+		@include media('<=xxxs') {
+			font-size: 17px;
+		}
+
+		span {
+			color: rgb(var(--accent));
+		}
+	}
+
+	&__consult {
+
+		&.button {
+		
+			@include media('<=sm') {
+				font-size: 18px;
+			}
+
+			@include media('<=xxs') {
+				width: 100%;
+			}
+	
+			&::after {
+				@include media('<=sm') {
+					width: 40px;
+					height: 19px;
+				}
+			}
+		}
+	}
+
+	&__about {
+		color: #bbb;
+
+		h2 {
+
+		}
+
+		p {
+			font-size: 20px;
+			margin-bottom: 20px;
+			
+			@include media('<=lg') {
+				font-size: 19px;
+			}
+			
+			@include media('<=md') {
+				font-size: 18px;
+			}
+			
+			@include media('<=sm') {
+				font-size: 17px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 16px;
+			}
+		}
+	}
+
+	&__tags {
+
+	}
+}
