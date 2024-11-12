@@ -27,7 +27,7 @@
 
 		&.button {
 			font-size: 22px;
-			height: 55px;
+			min-height: 55px;
 			border-radius: 10px;
 		
 			@include media('<=sm') {
@@ -182,18 +182,19 @@
 	&__apply {
 
 		&.button {
-			height: 58px;
+			height: auto;
+			min-height: 58px;
 			font-size: 22px;
 			width: 100%;
 		
 			@include media('<=sm') {
 				font-size: 20px;
-				height: 54px;
+				min-height: 54px;
 			}
 			
 			@include media('<=xxs') {
 				font-size: 16px;
-				height: 52px;
+				min-height: 52px;
 			}
 		}
 	}

@@ -72,17 +72,17 @@
 		pointer-events: auto;
 
 		&.button {
-			height: 80px;
+			min-height: 80px;
 			width: 100%;
 			max-width: 340px;
 			
 			@include media('<=lg') {
-				height: 70px;
+				min-height: 70px;
 				max-width: 340px;
 			}
 			
 			@include media('<=sm') {
-				height: 55px;
+				min-height: 55px;
 				max-width: 250px;
 				font-size: 20px;
 			}
