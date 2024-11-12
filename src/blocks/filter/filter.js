@@ -3,16 +3,31 @@ import { rangeDoubleTweaker } from "../../js/libs/rangeDoubleTweaker";
 
 (() => {
 	const filters = document.querySelectorAll('.filter');
+	let storage = JSON.parse(localStorage.getItem('filters')) || [];
+	
+	const addToLocalStorageArray = (newItem, add = true) => {
+		if (add) {
+			storage.push(newItem);
+		} else {
+			storage = storage.filter((value) => value != newItem);
+		}
+
+		localStorage.setItem('filters', JSON.stringify(storage));
+	}
 
 	if (! filters.length) return;
 
 	filters.forEach((filter) => {
-		filter.querySelector('.filter__title').addEventListener('click', (e) => {
-			filter.classList.toggle('opened', slideToggle(filter.querySelector('.filter__body')));
+		filter.classList.toggle('opened', storage.includes(filter.id));
 
-			/* slideToggle(filter.querySelector('.filter__body'), {
-				callback: () => filter.classList.toggle('opened')
-			}); */
+		filter.querySelector('.filter__title').addEventListener('click', (e) => {
+			if (slideToggle(filter.querySelector('.filter__body'))) {
+				filter.classList.add('opened');
+				addToLocalStorageArray(filter.id);
+			} else {
+				filter.classList.remove('opened');
+				addToLocalStorageArray(filter.id, false);
+			}
 		});
 
 		rangeDoubleTweaker(filter.querySelector('.filter__range'), { input: true });

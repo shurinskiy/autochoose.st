@@ -5,31 +5,31 @@ export const stickySidebar = (items, options = {}) => {
 
 			this.aside = aside;
 			this.currPos = window.scrollY;
-			this.position = getComputedStyle(aside).position;
-			this.asideHeight = aside.offsetHeight;
-			this.screenHeight = window.innerHeight;
+			this.styles = window.getComputedStyle(aside);
+			this.startScroll = parseInt(this.styles.top, 10);
+			this.endScroll = window.innerHeight - this.aside.offsetHeight - parseInt(this.styles.bottom, 10);
+			this.availableHeight = window.innerHeight - this.startScroll;
+			this.aside.style.top = this.startScroll + 'px';
+
 			this.options = {
-				top: 0,
-				bottom: 0,
+				sensitivity: 0,
 				...options
 			}
 
-			this.init();
+			this.#init();
 		}
 
-		asideScroll() {
-			if(this.position !== 'sticky') return;
-
-			if (this.asideHeight <= this.screenHeight) {
+		#asideScroll() {
+			if(this.styles.position !== 'sticky') return;
+			
+			if (this.aside.offsetHeight <= this.availableHeight) {
 				this.aside.style.top = this.startScroll + 'px';
 				return;
 			}
-
-			this.endScroll = window.innerHeight - this.aside.offsetHeight - this.options.bottom;
-	
-			let asideTop = parseInt(this.aside.style.top.replace('px;', ''));
-	
-			if (this.asideHeight > this.screenHeight) {
+			
+			const asideTop = parseInt(this.aside.style.top, 10);
+			
+			if (this.aside.offsetHeight > this.availableHeight) {
 				if (window.scrollY < this.currPos) {
 					if (asideTop < this.startScroll) {
 						this.aside.style.top = (asideTop + this.currPos - window.scrollY) + 'px';
@@ -47,7 +47,7 @@ export const stickySidebar = (items, options = {}) => {
 			this.currPos = window.scrollY;
 		}
 		
-		_throttle = (fn) => {
+		#throttle(fn) {
 			let timeout = null;
 		
 			return (...args) => {
@@ -61,21 +61,22 @@ export const stickySidebar = (items, options = {}) => {
 			}
 		}
 
-		init() {
-			this.startScroll = +this.options.top;
-			this.endScroll = window.innerHeight - this.asideHeight - this.options.bottom;
-			this.aside.style.top = this.startScroll + 'px';
+		reinit() {
+			const { top } = this.aside.style;
 
-			window.addEventListener('scroll', this.asideScroll.bind(this), { capture: true, passive: true });
+			this.aside.removeAttribute('style');
+			this.styles = window.getComputedStyle(this.aside);
+			this.startScroll = parseInt(this.styles.top, 10);
+			this.endScroll = window.innerHeight - this.aside.offsetHeight - parseInt(this.styles.bottom, 10);
+			this.availableHeight = window.innerHeight - this.startScroll;
+			this.aside.style.top = top;
+			this.#asideScroll();
+		}
 
-			window.addEventListener('resize', this._throttle(() => {
-				this.position = getComputedStyle(this.aside).position;
-				this.asideHeight = this.aside.offsetHeight;
-				this.screenHeight = window.innerHeight;
-				this.asideScroll();
-			}));
-
-			this.asideScroll();
+		#init() {
+			window.addEventListener('scroll', this.#asideScroll.bind(this), { capture: true, passive: true });
+			window.addEventListener('resize', this.#throttle(this.reinit.bind(this)));
+			this.#asideScroll();
 		}
 	}
 

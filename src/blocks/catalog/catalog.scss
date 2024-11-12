@@ -15,6 +15,10 @@
 			font-size: 24px;
 			font-family: "BS", sans-serif;
 			padding-right: 20px;
+
+			@include media('<=sm') {
+				display: none;
+			}
 		}
 	}
 
@@ -25,6 +29,14 @@
 			font-size: 22px;
 			height: 55px;
 			border-radius: 10px;
+		
+			@include media('<=sm') {
+				font-size: 20px;
+			}
+		
+			@include media('<=xxs') {
+				font-size: 18px;
+			}
 		}
 	}
 
@@ -40,19 +52,126 @@
 		@include media('<=md') {
 			grid-gap: 20px;
 		}
+		
+		@include media('<=sm') {
+			display: block;
+		}
 	}
 
 	&__aside {
 		grid-column: span 1;
+		box-sizing: border-box;
+		background-color: #111;
+		
+		@include media('<=sm') {
+			position: fixed;
+			height: 100vh;
+			height: 100dvh;
+			z-index: 12;
+			right: -400px; top: 0;
+			max-width: 400px;
+			// width: calc(100% - 40px);
+			width: 100%;
+			border-left: 1px solid rgb(var(--accent));
+			transition: right 0.3s ease-out;
+			padding: 60px 0 20px 30px;
+			
+			&.opened {
+				right: 0;
+			}
+			
+			@include media('<=xxs') {
+				width: calc(100% - 40px);
+				right: calc(-100% + 40px);
+				padding: 60px 0 20px 20px;
+			}
+		}
 	}
 
+	&__aside-toggle {
+		@extend %reset-button;
+		position: absolute;
+		background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="6" height="24" viewBox="0 0 6 24"><defs><style>.aside{fill:#111111;fill-rule:evenodd;}</style></defs><circle class="aside" cx="3" cy="3" r="3"/><circle class="aside" cx="3" cy="12" r="3"/><circle class="aside" cx="3" cy="21" r="3"/></svg>') left 16px center / auto no-repeat rgb(var(--accent));
+		width: 30px;
+		height: 50px;
+		right: 100%;
+		z-index: -1;
+		top: calc(50% - 25px);
+		border-radius: 100px 0 0 100px;
+		display: none;
+
+		@include media('<=sm') {
+			display: block;
+		}
+	}
+
+	&__aside-close {
+		@extend %reset-button;
+		position: absolute;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		top: 20px;
+		left: 22px;
+		z-index: 1;
+		display: none;
+
+		@include media('<=sm') {
+			display: block;
+		}
+
+		svg {
+			display: block;
+			fill: #fff;
+			width: 100%;
+			max-width: 100%;
+			max-height: 100%;
+		}
+	}
+	
 	&__filters {
 		display: flex;
 		flex-flow: column nowrap;
 		gap: 30px;
+		position: sticky;
+		bottom: 20px;
+		top: 130px;
+		
+		@include media('<=lg') {
+			top: 110px;
+		}
 		
 		@include media('<=md') {
 			gap: 20px;
+		}
+		
+		@include media('<=sm') {
+			position: static;
+			overflow: auto;
+			height: 100%;
+			padding-right: 30px;
+			
+			&::-webkit-scrollbar {
+				width: 3px;
+				height: 3px;
+			}
+			
+			&::-webkit-scrollbar-track {
+				background-color: #111;
+			}
+			
+			&::-webkit-scrollbar-thumb {
+				background-color: rgb(var(--accent));
+				border-radius: 10px;
+			}
+			
+			&::-webkit-scrollbar-corner {
+				background-color: transparent;
+			}		
+		}
+		
+		@include media('<=xxs') {
+			padding-right: 20px;
 		}
 	}
 
@@ -66,6 +185,16 @@
 			height: 58px;
 			font-size: 22px;
 			width: 100%;
+		
+			@include media('<=sm') {
+				font-size: 20px;
+				height: 54px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 16px;
+				height: 52px;
+			}
 		}
 	}
 
@@ -82,6 +211,10 @@
 		@include media('<=md') {
 			grid-gap: 20px;
 		}
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+		}
 	}
 
 	&__item {
@@ -93,6 +226,10 @@
 		
 		@include media('<=lg') {
 			grid-column: span 2;
+		}
+		
+		@include media('<=xxs') {
+			grid-column: span 1;
 		}
 	}
 }

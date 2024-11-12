@@ -1,15 +1,15 @@
 import scrollLock from 'scroll-lock';
 import { menuToggle } from "../../js/libs/menuToggle";
+import { stickySidebar } from "../../js/libs/stickySidebar";
 
 (() => {
-	const header = document.querySelector('.header');
-	if(!header) return;
-
+	const aside = document.querySelector('.catalog__aside');
+	if(!aside) return;
 	
-	const navi = header.querySelector('.header__navi');
-	const toggles = header.querySelectorAll('.header__toggle, .header__close');
 	
-	const menu = menuToggle(navi, toggles, {
+	const toggles = document.querySelectorAll('button.catalog__aside-toggle, button.catalog__aside-close');
+	
+	const sidebar = menuToggle(aside, toggles, {
 		omitToClose: '.modal',
 		class: 'opened',
 		open: function() {
@@ -19,10 +19,6 @@ import { menuToggle } from "../../js/libs/menuToggle";
 			Object.assign(this.style, { maxWidth: maxw + scrollw + 'px' });
 			scrollLock.disablePageScroll();
 			document.body.classList.add('underlay');
-
-			this.querySelectorAll('a.header__menu-link[href*="#"]').forEach(link => {
-				link.addEventListener('click', (e) => menu.menuClose(e));
-			});
 		},
 		close: function() {
 			scrollLock.clearQueueScrollLocks();
@@ -30,18 +26,16 @@ import { menuToggle } from "../../js/libs/menuToggle";
 			document.body.classList.add('underlay_closing');
 			
 			this.addEventListener('transitionend', e => {
-				document.body.classList.remove('underlay', 'underlay_closing');
+				document.body.classList.remove('underlay','underlay_closing');
 			}, { once: true });
 		}
 	});
 	
-	window.addEventListener('scroll', () => {
-		header.classList[window.scrollY < 30 ? 'remove': 'add']('header_scrolled');
-	});
-
 	// открытие и закрытие меню, свайпом на мобильных устройствах
-	navi.addEventListener('swiped-left', (e) => menu.menuClose(e));
+	aside.addEventListener('swiped-right', (e) => sidebar.menuClose(e));
 	// чтобы не перекрывались с главным меню
-	document.querySelector('button.catalog__aside-toggle')?.addEventListener('click', (e) => menu.menuClose(e, false));
+	document.querySelector('button.header__toggle')?.addEventListener('click', (e) => sidebar.menuClose(e, false));
+	// прокрутка с прилипанием для всего сайдбара на больших размерах экрана
+	stickySidebar(aside.querySelector('.catalog__filters'));
 
 })();

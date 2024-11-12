@@ -76,6 +76,7 @@ body, html {
 
 body {
 	padding-top: 110px;
+	position: relative;
 	
 	@include media('<=lg') {
 		padding-top: 90px;

@@ -2,7 +2,6 @@
 	$self: &;
 	display: block;
 	box-sizing: border-box;
-	// border: 1px solid rgb(var(--accent));
 	border: 1px solid #5d5d5d;
 	padding: 16px 15px;
 	border-radius: 10px;
@@ -27,28 +26,32 @@
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
+		
+		@include media('<=md') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 16px;
+		}
 
 		&::after {
-			transition: transform 0.3s;
+			// transition: transform 0.3s;
 			display: block;
 			content: '';
 			width: 20px;
 			height: 12px;
 			background: svg-url('<svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M1.14286 1.22565C1.53249 0.834241 2.16566 0.832807 2.55707 1.22245L10.0003 8.63205L17.4436 1.22245C17.835 0.832807 18.4681 0.834241 18.8578 1.22565C19.2474 1.61706 19.246 2.25022 18.8546 2.63986L10.7058 10.7518C10.3157 11.1402 9.68496 11.1402 9.2948 10.7518L1.14606 2.63986C0.754651 2.25022 0.753217 1.61706 1.14286 1.22565Z" fill="white"/></svg>') no-repeat center / contain transparent;
+		
+			@include media('<=md') {
+				width: 18px;
+				height: 10px;
+			}
 		}
 	}
 	
 	&__body {
 		display: none;
-		
-		/* &_checkboxes {
-			flex-flow: column nowrap;
-			gap: 15px;
-
-			&[style*="display: block"] {
-				display: flex !important;
-			}
-		} */
 	}
 
 	&__checkbox {
