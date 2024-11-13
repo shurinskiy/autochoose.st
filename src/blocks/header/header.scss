@@ -212,20 +212,28 @@
 			height: 26px;
 			max-width: 100%;
 			max-height: 100%;
-			transition: fill 0.3s;
+			// transition: fill 0.3s;
 		}
 	}
 
 	&__menu-exit {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-decoration: none;
 		flex-shrink: 0;
-		width: 26px;
-		height: 26px;
-		display: none;
+		width: 40px;
+		height: 40px;
+		
+		@include media('<=sm') {
+			justify-content: flex-start;
+		}
 
 		svg {
 			display: block;
 			fill: #f00;
-			width: 100%;
+			width: 26px;
+			height: 26px;
 			max-width: 100%;
 			max-height: 100%;
 		}

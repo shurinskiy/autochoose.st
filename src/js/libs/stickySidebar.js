@@ -3,12 +3,19 @@ export const stickySidebar = (items, options = {}) => {
 		constructor(aside, options) {
 			if(! aside) return;
 
+			// сайдбар
 			this.aside = aside;
+			// текущая позиция скролла для определения направления проскролливания
 			this.currPos = window.scrollY;
+			// смотрим в актуальные стили сайдбара
 			this.styles = window.getComputedStyle(aside);
+			// отступ для фиксации верха, берем из стилей
 			this.startScroll = parseInt(this.styles.top, 10);
-			this.endScroll = window.innerHeight - this.aside.offsetHeight - parseInt(this.styles.bottom, 10);
-			this.availableHeight = window.innerHeight - this.startScroll;
+			// высота странички с учетом заданного отступа для фиксации верха
+			this.availableHeightTop = window.innerHeight - this.startScroll;
+			// высота странички с учетом заданного отступа для фиксации низа
+			this.availableHeightBottom = window.innerHeight - parseInt(this.styles.bottom, 10);
+			// устанавливаем верхнее начальное положение при инициализации
 			this.aside.style.top = this.startScroll + 'px';
 
 			this.options = {
@@ -22,25 +29,26 @@ export const stickySidebar = (items, options = {}) => {
 		#asideScroll() {
 			if(this.styles.position !== 'sticky') return;
 			
-			if (this.aside.offsetHeight <= this.availableHeight) {
+			if (this.aside.offsetHeight <= this.availableHeightTop) {
 				this.aside.style.top = this.startScroll + 'px';
 				return;
 			}
 			
-			const asideTop = parseInt(this.aside.style.top, 10);
+			const currentTop = parseInt(this.aside.style.top, 10);
+			const endScroll = this.availableHeightBottom - this.aside.offsetHeight
 			
-			if (this.aside.offsetHeight > this.availableHeight) {
+			if (this.aside.offsetHeight > this.availableHeightTop) {
 				if (window.scrollY < this.currPos) {
-					if (asideTop < this.startScroll) {
-						this.aside.style.top = (asideTop + this.currPos - window.scrollY) + 'px';
-					} else if (asideTop >= this.startScroll && asideTop !== this.startScroll) {
+					if (currentTop < this.startScroll) {
+						this.aside.style.top = (currentTop + this.currPos - window.scrollY) + 'px';
+					} else if (currentTop >= this.startScroll && currentTop !== this.startScroll) {
 						this.aside.style.top = this.startScroll + 'px';
 					}
 				} else {
-					if (asideTop > this.endScroll) {
-						this.aside.style.top = (asideTop + this.currPos - window.scrollY) + 'px';
-					} else if (asideTop < (this.endScroll) && asideTop !== this.endScroll) {
-						this.aside.style.top = this.endScroll + 'px';
+					if (currentTop > endScroll) {
+						this.aside.style.top = (currentTop + this.currPos - window.scrollY) + 'px';
+					} else if (currentTop < (endScroll) && currentTop !== endScroll) {
+						this.aside.style.top = endScroll + 'px';
 					}
 				}
 			}
@@ -61,21 +69,20 @@ export const stickySidebar = (items, options = {}) => {
 			}
 		}
 
-		reinit() {
-			const { top } = this.aside.style;
-
-			this.aside.removeAttribute('style');
-			this.styles = window.getComputedStyle(this.aside);
-			this.startScroll = parseInt(this.styles.top, 10);
-			this.endScroll = window.innerHeight - this.aside.offsetHeight - parseInt(this.styles.bottom, 10);
-			this.availableHeight = window.innerHeight - this.startScroll;
-			this.aside.style.top = top;
-			this.#asideScroll();
-		}
-
 		#init() {
 			window.addEventListener('scroll', this.#asideScroll.bind(this), { capture: true, passive: true });
-			window.addEventListener('resize', this.#throttle(this.reinit.bind(this)));
+			window.addEventListener('resize', this.#throttle(() => {
+				const { top } = this.aside.style;
+
+				this.aside.removeAttribute('style');
+				this.styles = window.getComputedStyle(this.aside);
+				this.startScroll = parseInt(this.styles.top, 10);
+				this.availableHeightTop = window.innerHeight - this.startScroll;
+				this.availableHeightBottom = window.innerHeight - parseInt(this.styles.bottom, 10);
+				this.aside.style.top = top;
+				this.#asideScroll();
+			}));
+
 			this.#asideScroll();
 		}
 	}

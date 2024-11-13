@@ -23,10 +23,10 @@ import { rangeDoubleTweaker } from "../../js/libs/rangeDoubleTweaker";
 		filter.querySelector('.filter__title').addEventListener('click', (e) => {
 			if (slideToggle(filter.querySelector('.filter__body'))) {
 				filter.classList.add('opened');
-				addToLocalStorageArray(filter.id);
+				if (filter.id) addToLocalStorageArray(filter.id);
 			} else {
 				filter.classList.remove('opened');
-				addToLocalStorageArray(filter.id, false);
+				if (filter.id) addToLocalStorageArray(filter.id, false);
 			}
 		});
 

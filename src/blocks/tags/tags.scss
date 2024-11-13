@@ -15,16 +15,29 @@
 		padding: 10px 24px;
 		border: 1px solid rgb(var(--accent));
 		width: fit-content;
-		min-width: 180px;
+		min-width: 240px;
 		border-radius: 6px;
+		flex-grow: 1;
+		
+		@include media('<=lg') {
+			min-width: 200px;
+		}
+		
+		@include media('<=md') {
+			min-width: 180px;
+		}
+		
+		@include media('<=sm') {
+			min-width: 150px;
+		}
 		
 		@include media('<=xs') {
-			min-width: 160px;
+			min-width: 130px;
 			padding: 7px 19px;
 		}
 		
 		@include media('<=xxs') {
-			min-width: 140px;
+			min-width: 120px;
 		}
 
 		span:nth-child(1) {

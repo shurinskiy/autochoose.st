@@ -20,6 +20,5 @@ import { makeGallery } from "../../js/libs/makeGallery";
 			});
 		}
 	});
-
 	
 })();
