@@ -5,8 +5,16 @@
 	border: 1px solid #5d5d5d;
 	padding: 16px 15px;
 	border-radius: 10px;
+	background-color: #111;
+	transition: background-color 0.3s;
+	
+	@include media('<=sm') {
+		border-radius: 6px;
+	}
 
 	&.opened {
+		background-color: #141414;
+
 		#{$self}__title::after {
 			transform: rotate(180deg);
 		}
@@ -19,7 +27,7 @@
 	&__title {
 		color: #a0a0a0;
 		font-family: "BS", sans-serif;
-		font-size: 22px;
+		font-size: 20px;
 		line-height: 1;
 		padding-top: 2px;
 		cursor: pointer;

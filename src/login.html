@@ -1,0 +1,27 @@
+@@include("_head.html") 
+@@include("_header.html") 
+
+<main class="login mb1 pt">
+	<div class="login__inner container">
+		<h1 class="login__title title mb3">Войти в аккаунт</h1>
+		<form class="login__form" autocomplete="off">
+			<div class="login__fields mb3">
+				<div class="login__field field">
+					<label class="field__title">Email</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="login__field field">
+					<label class="field__title">Пароль</label>
+					<input class="field__box field__box_text" type="password">
+				</div>
+			</div>
+			<div class="login__buttons">
+				<a class="login__button button" href="./">Войти</a>
+				<a class="login__button button button_dark" href="./register.html">Регистрация</a>
+			</div>
+		</form>
+
+	</div>
+</main>
+
+@@include("_bottom.html")

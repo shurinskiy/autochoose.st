@@ -8,3 +8,4 @@ import "../blocks/gallery/gallery.js";
 import "../blocks/faq/faq.js";
 import "../blocks/select/select.js";
 import "../blocks/pictures/pictures.js";
+import "../blocks/about/about.js";

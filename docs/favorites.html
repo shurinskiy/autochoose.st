@@ -38,99 +38,97 @@
 	</div>
 </header> 
 
-<main class="detail mb1 pt">
-	<div class="detail__inner container">
-		<div class="detail__top">
-			<div class="detail__gallery d-gallery mb1">
-				<img 
-					src="./images/detail-image-2.webp" 
-					data-src="./images/detail-image-2-large.webp"
-					data-fancybox="detail"
-					loading="lazy" 
-					alt="" 
+<main class="catalog mb1 pt">
+	<div class="catalog__inner container">
+		<h1 class="catalog__title title mb3">Избранное <span>(6)</span></h1>
+		<div class="catalog__content">
+			<aside class="catalog__aside">
+	<button class="catalog__aside-toggle"></button>
+	<button class="catalog__aside-close"><svg><use xlink:href="#icon-close"></use></svg></button>
+	<form class="catalog__filters" action="./" data-scroll-lock-scrollable>
+		<div class="catalog__filter filter" id="filter-price">
+			<h3 class="filter__title">Цена</h3>
+			<fieldset class="filter__body">
+				<div 
+					class="filter__range" 
+					data-range-start-min="20000" 
+					data-range-start-max="80000" 
+					data-range-max="100000"
+					data-range-step="1000"
+					data-range-gap="20000"
 				>
-				<img 
-					src="./images/detail-image-1.webp" 
-					data-src="./images/detail-image-1-large.webp"
-					data-fancybox="detail"
-					loading="lazy" 
-					alt="" 
-				>
-				<img 
-					src="./images/detail-image-3.webp" 
-					data-src="./images/detail-image-3-large.webp"
-					data-fancybox="detail"
-					loading="lazy" 
-					alt="" 
-				>
-				<img 
-					src="./images/detail-image-4.webp" 
-					data-src="./images/detail-image-4-large.webp"
-					data-fancybox="detail"
-					loading="lazy" 
-					alt="" 
-				>
-				<img 
-					src="./images/detail-image-5.webp" 
-					data-src="./images/detail-image-5-large.webp"
-					data-fancybox="detail"
-					loading="lazy" 
-					alt="" 
-				>
-			</div>
-			<div class="detail__side mb1">
-				<h1 class="detail__title">LEXUS IS 300</h1>
-				<div class="detail__price">$15 000</div>
-				<div class="detail__profit">Экономия от рынка РБ: <span>-$4500</span></div>
-				<a class="detail__consult button button_dark button_arrowed" href="./consult.html">Консультация</a>
-			</div>
+					<input type="range">
+					<input type="range">
+				</div>
+			</fieldset>
 		</div>
-		<div class="detail__about mb3">
-			<h2 class="title mb3">Подробнее об авто</h2>
-			<p>LEXUS IS 300 2019 года напрямую из США! Менеджеры АвтоКаргоТрейд помогут проверить, купить, доставить любое авто с аукционов Америки. Колоссальная разница от покупки машин с аукционов США (учитывая все расходы и ремонт) 20-40% от авторынка в Беларуси.</p>
-			<p>Успейте сделать ставку на аукционе и почувствуйте непревзойденное качество и комфорт LEXUS IS 300 2019. Не упускайте свой шанс воплотить свои автомобильные мечты в реальность с АвтоКаргоТрейд!</p>
-			<p>Все лоты проходят тщательную проверку, исключены ошибки в подготовке документов, полное сопровождение до передачи автомобиля клиенту.</p>
-			<p>Офис компании находиться в Минске, авто возможно доставить в любой город Беларуси.</p>
+		<div class="catalog__filter filter" id="filter-brand">
+			<h3 class="filter__title">Марка</h3>
+			<fieldset class="filter__body">
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Mercedes benz</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Bmw</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Lexus</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value="" checked><span>Toyota</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Ferrari</span></label>
+			</fieldset>
 		</div>
-		<div class="detail__tags tags">
-			<div class="tags__item">
-				<span>Год</span>
-				<span>2019</span>
-			</div>
-			<div class="tags__item">
-				<span>Тип топлива</span>
-				<span>Бензин</span>
-			</div>
-			<div class="tags__item">
-				<span>ТИп кузова</span>
-				<span>Седан</span>
-			</div>
-			<div class="tags__item">
-				<span>Объем, л</span>
-				<span>2.0</span>
-			</div>
-			<div class="tags__item">
-				<span>Цвет</span>
-				<span>Зеленый</span>
-			</div>
-			<div class="tags__item">
-				<span>Привод</span>
-				<span>Задний</span>
-			</div>
-			<div class="tags__item">
-				<span>Местонахождениe</span>
-				<span>На аукционе в США</span>
-			</div>
+		<div class="catalog__filter filter" id="filter-carcase">
+			<h3 class="filter__title">Тип кузова</h3>
+			<fieldset class="filter__body">
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Кроссовер</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value="" checked><span>Внедорожник</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Седан</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Купе</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Родстер</span></label>
+			</fieldset>
 		</div>
-	</div>
-</main>
-
-<section class="gallery mb1">
-	<div class="gallery__inner container">
-		<h2 class="gallery__title title mb3">Похожие авто</h2>
-		<div class="gallery__slider swiper">
-			<div class="swiper-wrapper">
-				<div class="gallery__slide swiper-slide card card_detail">
+		<div class="catalog__filter filter" id="filter-year">
+			<h3 class="filter__title">Год</h3>
+			<fieldset class="filter__body">
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2019</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2020</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2021</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2022</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2023</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2024</span></label>
+			</fieldset>
+		</div>
+		<div class="catalog__filter filter" id="filter-fuel">
+			<h3 class="filter__title">Тип топлива</h3>
+			<fieldset class="filter__body">
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Бензин</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Дизель</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Гибрид</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Электро</span></label>
+			</fieldset>
+		</div>
+		<div class="catalog__filter filter" id="filter-model">
+			<h3 class="filter__title">Модель авто</h3>
+			<fieldset class="filter__body">
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Camry</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Lqnd cruiser</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Spider</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>Rav-4</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>ES 350</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>NX 350</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>LX 570</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>LC 500</span></label>
+			</fieldset>
+		</div>
+		<div class="catalog__filter filter" id="filter-volume">
+			<h3 class="filter__title">Объем, л</h3>
+			<fieldset class="filter__body">
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>1.4</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2.0</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>2.5</span></label>
+				<label class="filter__checkbox"><input type="checkbox" value=""><span>4.0</span></label>
+			</fieldset>
+		</div>
+		<button class="catalog__apply button">Применить</button>
+	</form>
+</aside>
+			<div class="catalog__items">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-1.webp" alt=""></a>
 	<div class="card__body">
 		<h3 class="card__title">Lexus NX 300 base 2024</h3>
@@ -144,11 +142,11 @@
 			<div class="card__price">$18000</div>
 		
 	</div>
-	<button class="card__favorite ">
+	<button class="card__favorite card__favorite_set">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-				<div class="gallery__slide swiper-slide card card_detail">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-2.webp" alt=""></a>
 	<div class="card__body">
 		<h3 class="card__title">Lexus UX 200 2024</h3>
@@ -162,11 +160,11 @@
 			<div class="card__price">$19000</div>
 		
 	</div>
-	<button class="card__favorite ">
+	<button class="card__favorite card__favorite_set">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-				<div class="gallery__slide swiper-slide card card_detail">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-3.webp" alt=""></a>
 	<div class="card__body">
 		<h3 class="card__title">Lexus RX 350 AWD 2024</h3>
@@ -184,7 +182,7 @@
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-				<div class="gallery__slide swiper-slide card card_detail">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-4.webp" alt=""></a>
 	<div class="card__body">
 		<h3 class="card__title">Lexus NX 300 base 2024</h3>
@@ -198,11 +196,11 @@
 			<div class="card__price">$30000</div>
 		
 	</div>
-	<button class="card__favorite ">
+	<button class="card__favorite card__favorite_set">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
-				<div class="gallery__slide swiper-slide card card_detail">
+				<div class="catalog__item card card_detail">
 	<a class="card__image" href="./detail.html"><img src="./images/card-image-5.webp" alt=""></a>
 	<div class="card__body">
 		<h3 class="card__title">Lexus LX 570 2024</h3>
@@ -216,22 +214,32 @@
 			<div class="card__price">$50000</div>
 		
 	</div>
-	<button class="card__favorite ">
+	<button class="card__favorite card__favorite_set">
+		<svg><use xlink:href="#icon-fav"></use></svg>
+	</button>
+</div>
+				<div class="catalog__item card card_detail">
+	<a class="card__image" href="./detail.html"><img src="./images/card-image-6.webp" alt=""></a>
+	<div class="card__body">
+		<h3 class="card__title">Lexus ES 200 2024</h3>
+		
+			<div class="card__props">
+				<div class="card__prop">Тип топлива: <span>Бензин</span></div>
+				<div class="card__prop">Объем: <span>2.0 литра</span></div>
+				<div class="card__prop">Привод: <span>Полный</span></div>
+				<div class="card__prop">Пробег: <span>6324 км</span></div>
+			</div>
+			<div class="card__price">$43000</div>
+		
+	</div>
+	<button class="card__favorite card__favorite_set">
 		<svg><use xlink:href="#icon-fav"></use></svg>
 	</button>
 </div>
 			</div>
-			<div class="gallery__navi">
-				<button class="gallery__button gallery__button_prev">
-					<svg><use xlink:href="#icon-next"></use></svg>
-				</button>
-				<button class="gallery__button gallery__button_next">
-					<svg><use xlink:href="#icon-next"></use></svg>
-				</button>
-			</div>
 		</div>
 	</div>
-</section>
+</main>
 
 <footer class="footer"> 
 	<div class="footer__inner container">

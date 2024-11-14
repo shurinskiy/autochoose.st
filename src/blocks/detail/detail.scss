@@ -1,14 +1,5 @@
 .detail {
 	$self: &;
-	padding-top: 60px;
-	
-	@include media('<=xs') {
-		padding-top: 45px;
-	}
-	
-	@include media('<=xxxs') {
-		padding-top: 35px;
-	}
 
 	&__inner {
 

@@ -1,12 +1,9 @@
 @@include("_head.html") 
 @@include("_header.html") 
 
-<main class="catalog mb1">
+<main class="catalog mb1 pt">
 	<div class="catalog__inner container">
-		<div class="catalog__top mb3">
-			<h2>Фильтр по параметрам</h2>
-			<a class="catalog__add button button_dark" href="./add.html">Добавить авто</a>
-		</div>
+		<h1 class="catalog__title title mb3">Избранное <span>(6)</span></h1>
 		<div class="catalog__content">
 			@@include('_catalog-aside.html')
 			<div class="catalog__items">
@@ -23,21 +20,24 @@
 					detail: true,
 					image: 'card-image-2.webp',
 					name: 'Lexus UX 200 2024',
-					price: '19000'
+					price: '19000',
+					set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
 					detail: true,
 					image: 'card-image-3.webp',
 					name: 'Lexus RX 350 AWD 2024',
-					price: '15000'
+					price: '15000',
+					set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
 					detail: true,
 					image: 'card-image-4.webp',
 					name: 'Lexus NX 300 base 2024',
-					price: '30000'
+					price: '30000',
+					set: true
 				})
 				@@include('_card.html', {
 					cls: 'catalog__item',
@@ -52,30 +52,9 @@
 					detail: true,
 					image: 'card-image-6.webp',
 					name: 'Lexus ES 200 2024',
-					price: '43000'
+					price: '43000',
+					set: true
 				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-7.webp',
-					name: 'Lexus NX 300 base 2024',
-					price: '18000'
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-8.webp',
-					name: 'Lexus NX 350 base 2024',
-					price: '20000'
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-9.webp',
-					name: 'Lexus LS 500 base 2024',
-					price: '23000'
-				})
-				@@include('_pagination.html', { cls: 'catalog__pagination'})
 			</div>
 		</div>
 	</div>

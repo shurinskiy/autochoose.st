@@ -1,42 +1,33 @@
-.add {
+.consult {
 	$self: &;
 
 	&__inner {
-
+		
+		&.container {
+			max-width: 760px;
+		}
 	}
 
 	&__title {
 		text-align: center;
 	}
 
-	&__properties {
+	&__form {
 
 	}
-	
+
 	&__fields {
 		display: grid;
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 1fr;
 		grid-gap: 30px;
 		
 		@include media('<=sm') {
 			grid-gap: 20px;
 		}
-		
-		@include media('<=xs') {
-			grid-template-columns: 1fr;
-		}
 	}
 
 	&__field {
 		grid-column: span 1;
-	}
-
-	&__pictures {
-
-	}
-
-	&__description {
-
 	}
 
 	&__submit {
@@ -45,7 +36,7 @@
 		&.button {
 
 			@include media('<=md') {
-				min-height: 50px;
+				min-height: 55px;
 				font-size: 20px;
 			}
 

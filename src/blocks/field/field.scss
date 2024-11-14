@@ -57,5 +57,10 @@
 		&.select {
 
 		}
+
+		&:is(:-webkit-autofill, :autofill) {
+			-webkit-box-shadow: 0 0 0px 1000px #141414 inset;
+			-webkit-text-fill-color: #fff;
+		}
 	}
 }

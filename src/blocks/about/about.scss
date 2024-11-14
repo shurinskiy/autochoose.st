@@ -1,0 +1,161 @@
+.about {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__text {
+		font-size: 20px;
+		line-height: 1.4;
+		color: #c9c9c9;
+		
+		@include media('<=md') {
+			font-size: 18px;
+		}
+		
+		@include media('<=sm') {
+			font-size: 17px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 15px;
+		}
+		
+		p {
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: rgb(var(--accent));
+			text-decoration: none;
+
+			&:hover {
+				text-decoration: underline;
+			}
+		}
+	}
+
+	&__gallery {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__image {
+		overflow: hidden;
+		box-sizing: border-box;
+		margin-bottom: 20px;
+		border-radius: 10px;
+		max-height: 320px;
+		min-height: 150px;
+		cursor: pointer;
+		flex-grow: 1;
+		max-width: calc(33.3% - 15px);
+		
+		@include media('<=sm') {
+			max-width: calc(33.3% - 10px);
+			margin-bottom: 14px;
+			border-radius: 6px;
+		}
+		
+		@include media('<=xxs') {
+			max-width: calc(50% - 8px);
+			min-height: 120px;
+		}
+		
+		&:nth-last-child(-n+2) {
+			max-width: calc(50% - 12px);
+			
+			@include media('<=sm') {
+				max-width: calc(50% - 8px);
+			}
+		}
+
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+			filter: grayscale(0.5) brightness(0.7);
+			transition: filter 0.3s;
+
+			&:hover {
+				filter: none;
+			}
+		}
+	}
+
+	&__features {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		counter-reset: item_ctr;
+	}
+
+	&__feature {
+		box-sizing: border-box;
+		padding: 15px;
+		flex-grow: 1;
+		// border: 1px solid rgb(var(--accent));
+		border: 1px solid #444;
+		border-radius: 6px;
+		font-size: 20px;
+		margin-bottom: 20px;
+		background-color: #181818;
+		color: #ccc;
+
+		@include media('<=md') {
+			font-size: 18px;
+			line-height: 1.4;
+		}
+		
+		@include media('<=xs') {
+			font-size: 16px;
+			max-width: calc(50% - 11px) !important;
+		}
+		
+		@include media('<=xxs') {
+			font-size: 16px;
+			max-width: none !important;
+		}
+
+		&::before {
+			display: block;
+			counter-increment: item_ctr;
+			content: "0" counter(item_ctr);
+			color: rgb(var(--accent));
+			font-weight: 800;
+			font-size: 40px;
+			margin-bottom: 10px;
+			
+			@include media('<=md') {
+				font-size: 32px;
+			}
+			
+			@include media('<=xxs') {
+				font-size: 28px;
+			}
+		}
+
+		&:nth-child(-n + 3) {
+			max-width: calc(33.3% - 13px);
+		}
+
+		&:nth-child(n + 4) {
+			max-width: calc(50% - 11px);
+		}
+
+		&:last-child {
+			max-width: 100%;
+		}
+	}
+}

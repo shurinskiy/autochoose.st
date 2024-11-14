@@ -128,18 +128,21 @@ em { font-style: italic; }
 	to { opacity: 1; }
 }
 
+.pt { padding-top: 60px; }
 .mb1 { margin-bottom: 100px; }
 .mb2 { margin-bottom: 60px; }
 .mb3 { margin-bottom: 40px; }
 
 
 @include media('<=sm') {
+	.pt { padding-top: 45px; }
 	.mb1 { margin-bottom: 60px; }
 	.mb2 { margin-bottom: 40px; }
 	.mb3 { margin-bottom: 30px; }
 }
 
 @include media('<=xxs') {
+	.pt { padding-top: 35px; }
 	.mb1 { margin-bottom: 40px; }
 	.mb2 { margin-bottom: 30px; }
 	.mb3 { margin-bottom: 20px; }

@@ -1,14 +1,5 @@
 .faq {
 	$self: &;
-	padding-top: 60px;
-	
-	@include media('<=xs') {
-		padding-top: 45px;
-	}
-	
-	@include media('<=xxxs') {
-		padding-top: 35px;
-	}
 
 	&__inner {
 
@@ -80,6 +71,11 @@
 		padding-top: 20px;
 		color: #aaa;
 		line-height: 1.3;
+		font-size: 17px;
+		
+		@include media('<=sm') {
+			font-size: 16px;
+		}
 		
 		@include media('<=xxs') {
 			font-size: 15px;

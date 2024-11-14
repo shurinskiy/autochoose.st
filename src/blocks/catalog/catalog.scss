@@ -6,6 +6,15 @@
 
 	}
 
+	&__title {
+		text-align: center;
+
+		span {
+			color: rgb(var(--accent));
+			font-weight: 400;
+		}
+	}
+
 	&__top {
 		display: flex;
 		align-items: center;
@@ -203,6 +212,7 @@
 		grid-column: span 1;
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
+		align-content: start;
 		grid-gap: 30px;
 		
 		@include media('<=lg') {
