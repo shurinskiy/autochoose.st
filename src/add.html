@@ -1,0 +1,88 @@
+@@include("_head.html") 
+@@include("_header.html") 
+
+<main class="add mb1">
+	<div class="add__inner container">
+		<h1 class="add__title title mb2">Добавть авто</h1>
+		<form class="add__properties">
+			<div class="add__fields mb2">
+				<div class="add__field field">
+					<label class="field__title">Марка</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Модель</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Тип кузова</label>
+					<select class="field__box">
+						<option value="">Седан</option>
+						<option value="">Хэтчбек</option>
+						<option value="">Универсал</option>
+						<option value="">Кабриолет</option>
+						<option value="">Минивэн</option>
+						<option value="">Купе</option>
+						<option value="">Внедорожник</option>
+						<option value="">Кроссовер</option>
+					</select>
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Тип топлива</label>
+					<select class="field__box">
+						<option value="">Бензин</option>
+						<option value="">Дизель</option>
+					</select>
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Год</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Привод</label>
+					<select class="field__box">
+						<option value="">Передний</option>
+						<option value="">Задний</option>
+						<option value="">Полный</option>
+					</select>
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Объем</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Цвет</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+				<div class="add__field field">
+					<label class="field__title">Цена</label>
+					<input class="field__box field__box_text" type="text">
+				</div>
+			</div>
+			<div class="add__pictures pictures mb3">
+				<div class="pictures__add"></div>
+				<div class="pictures__added">
+					<div class="pictures__item">
+						<img src="./images/detail-image-1.webp" alt="">
+					</div>
+					<div class="pictures__item">
+						<img src="./images/detail-image-2.webp" alt="">
+					</div>
+					<div class="pictures__item">
+						<img src="./images/detail-image-3.webp" alt="">
+					</div>
+					<div class="pictures__item">
+						<img src="./images/detail-image-4.webp" alt="">
+					</div>
+				</div>
+			</div>
+			<div class="add__description field mb2">
+				<label class="field__title">Описание</label>
+				<textarea class="field__box field__box_area"></textarea>
+			</div>
+			<button class="add__submit button" type="button">Добавить в каталог</button>
+		</form>
+	</div>
+</main>
+
+@@include("_bottom.html")

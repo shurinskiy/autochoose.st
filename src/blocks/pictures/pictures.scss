@@ -1,0 +1,92 @@
+.pictures {
+	$self: &;
+	display: flex;
+	gap: 30px;
+	
+	@include media('<=lg') {
+		gap: 20px;
+	}
+	
+	@include media('<=sm') {
+		flex-flow: column nowrap;
+	}
+	
+	@include media('<=xxs') {
+		gap: 16px;
+	}
+
+	&__add {
+		width: 550px;
+		min-height: 300px;
+		min-width: 300px;
+		position: relative;
+		border-radius: 8px;
+		background: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.75)), url('#{$images-path}/detail-image-3.webp') center / cover no-repeat;
+		
+		@include media('<=sm') {
+			min-width: auto;
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			min-height: 240px;
+			width: 100%;
+		}
+	
+		&::before, &::after {
+			display: block;
+			box-sizing: border-box;
+			content: '';
+			background-color: rgb(var(--accent));
+			height: 100%;
+			width: 100%;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		&::before {
+			max-height: 100px;
+			max-width: 2px;
+		}
+
+		&::after {
+			max-width: 100px;
+			max-height: 2px;
+		}
+	}
+
+	&__added {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+		flex-grow: 1;
+		grid-auto-rows: minmax(240px, auto);
+		
+		@include media('<=lg') {
+			grid-gap: 20px;
+		}
+		
+		@include media('<=xxs') {
+			grid-auto-rows: minmax(160px, auto);
+			grid-gap: 16px;
+		}
+		
+		@include media('<=xxxs') {
+			grid-auto-rows: minmax(120px, auto);
+		}
+	}
+
+	&__item {
+		overflow: hidden;
+		border-radius: 8px;
+
+		img {
+			display: block;
+			height: 100%;
+			width: 100%;
+			object-fit: cover;
+		}
+	}
+}
