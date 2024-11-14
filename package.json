@@ -68,6 +68,7 @@
 		"@fancyapps/ui": "^5.0.36",
 		"scroll-lock": "^2.1.5",
 		"swiped-events": "^1.2.0",
-		"swiper": "^11.1.14"
+		"swiper": "^11.1.14",
+		"ymaps": "^0.2.1"
 	}
 }

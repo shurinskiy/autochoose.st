@@ -1,0 +1,110 @@
+.contacts {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+		text-align: center;
+	}
+
+	&__body {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 30px;
+		
+		@include media('<=md') {
+			grid-template-columns: 0.8fr 1.2fr;
+		}
+		
+		@include media('<=xs') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__side {
+		display: flex;
+		flex-flow: column nowrap;
+		align-items: flex-end;
+		justify-content: space-around;
+		gap: 20px;
+		
+		@include media('<=xs') {
+			align-items: flex-start;
+		}
+	}
+
+	&__item {
+		text-align: right;
+
+		@include media('<=xs') {
+			text-align: left;
+		}
+	}
+
+	&__subtitle {
+		font-size: 28px;
+		font-family: "BS", sans-serif;
+		
+		@include media('<=sm') {
+			font-size: 24px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 20px;
+		}
+	}
+	
+	&__link {
+		color: rgb(var(--accent));
+		font-size: 20px;
+
+		@include media('<=sm') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
+	}
+	
+	&__text {
+		font-size: 20px;
+
+		@include media('<=sm') {
+			font-size: 18px;
+		}
+		
+		@include media('<=xs') {
+			font-size: 16px;
+		}
+		span {
+			padding-top: 8px;
+			display: block;
+			color: #aaa;
+		}
+	}
+
+	&__map {
+		grid-column: span 1;
+		height: 550px;
+		overflow: hidden;
+		backface-visibility: hidden;
+		border-radius: 6px;
+		filter: grayscale(50%);
+		background: url('#{$images-path}contacts-map-bg.webp') center / cover no-repeat transparent;
+		
+		@include media('<=md') {
+			height: 450px;
+		}
+		
+		@include media('<=sm') {
+			width: 100%;
+		}
+		
+		@include media('<=xxs') {
+			height: 350px;
+		}
+	}
+}
