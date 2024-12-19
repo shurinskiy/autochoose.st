@@ -13,7 +13,14 @@
 				}
 				</div>
 				@@if(this.edit_set) { <button class="card__edit"><svg><use xlink:href="#icon-edit"></use></svg></button> }
-				<button class="card__favorite @@if(this.set){card__favorite_set}">
-					<svg><use xlink:href="#icon-fav"></use></svg>
-				</button>
+				@@if(!this.del_set) {
+					<button class="card__favorite @@if(this.set){card__favorite_set}">
+						<svg><use xlink:href="#icon-fav"></use></svg>
+					</button>
+				}
+				@@if(this.del_set) {
+					<button class="card__delete">
+						<svg><use xlink:href="#icon-trash"></use></svg>
+					</button>
+				}
 			</div>

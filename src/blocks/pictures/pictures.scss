@@ -81,12 +81,30 @@
 	&__item {
 		overflow: hidden;
 		border-radius: 8px;
+		position: relative;
 
 		img {
 			display: block;
 			height: 100%;
 			width: 100%;
 			object-fit: cover;
+		}
+	}
+
+	&__delete {
+		@extend %reset-button;
+		height: 40px;
+		width: 40px;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+		background-color: rgba(255, 255, 255, 0.7);
+		border-radius: 6px;
+
+		svg {
+			fill: #DE0A30;
+			height: 85%;
+			width: 85%;
 		}
 	}
 }

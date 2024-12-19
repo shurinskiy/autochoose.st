@@ -130,6 +130,21 @@
 		}
 	}
 
+	&__delete {
+		@extend %reset-button;
+		height: 34px;
+		width: 34px;
+		position: absolute;
+		top: 15px;
+		right: 15px;
+
+		svg {
+			fill: #DE0A30;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
 	&__props {
 		font-size: 15px;
 		font-weight: 200;

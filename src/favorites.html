@@ -1,61 +1,58 @@
 @@include("_head.html") 
 @@include("_header.html") 
 
-<main class="catalog mb1 pt">
-	<div class="catalog__inner container">
-		<h1 class="catalog__title title mb2">Избранное <span>(6)</span></h1>
-		<div class="catalog__content">
-			@@include('_catalog-aside.html')
-			<div class="catalog__items">
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-1.webp',
-					name: 'Lexus NX 300 base 2024',
-					price: '18000',
-					set: true
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-2.webp',
-					name: 'Lexus UX 200 2024',
-					price: '19000',
-					set: true
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-3.webp',
-					name: 'Lexus RX 350 AWD 2024',
-					price: '15000',
-					set: true
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-4.webp',
-					name: 'Lexus NX 300 base 2024',
-					price: '30000',
-					set: true
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-5.webp',
-					name: 'Lexus LX 570 2024',
-					price: '50000',
-					set: true
-				})
-				@@include('_card.html', {
-					cls: 'catalog__item',
-					detail: true,
-					image: 'card-image-6.webp',
-					name: 'Lexus ES 200 2024',
-					price: '43000',
-					set: true
-				})
-			</div>
+<main class="favorites mb1 pt">
+	<div class="favorites__inner container">
+		<h1 class="favorites__title title mb2">Избранное <span>(6)</span></h1>
+		<div class="favorites__items">
+			@@include('_card.html', {
+				cls: 'favorites__item',
+				detail: true,
+				image: 'card-image-1.webp',
+				name: 'Lexus NX 300 base 2024',
+				price: '18000',
+				del_set: true
+			})
+			@@include('_card.html', {
+				cls: 'favorites__item',
+				detail: true,
+				image: 'card-image-2.webp',
+				name: 'Lexus UX 200 2024',
+				price: '19000',
+				del_set: true
+			})
+			@@include('_card.html', {
+				cls: 'favorites__item',
+				detail: true,
+				image: 'card-image-3.webp',
+				name: 'Lexus RX 350 AWD 2024',
+				price: '15000',
+				del_set: true
+			})
+			@@include('_card.html', {
+				cls: 'favorites__item',
+				detail: true,
+				image: 'card-image-4.webp',
+				name: 'Lexus NX 300 base 2024',
+				price: '30000',
+				del_set: true
+			})
+			@@include('_card.html', {
+				cls: 'favorites__item',
+				detail: true,
+				image: 'card-image-5.webp',
+				name: 'Lexus LX 570 2024',
+				price: '50000',
+				del_set: true
+			})
+			@@include('_card.html', {
+				cls: 'favorites__item',
+				detail: true,
+				image: 'card-image-6.webp',
+				name: 'Lexus ES 200 2024',
+				price: '43000',
+				del_set: true
+			})
 		</div>
 	</div>
 </main>

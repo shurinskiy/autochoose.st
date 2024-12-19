@@ -1,0 +1,39 @@
+.favorites {
+	$self: &;
+
+	&__inner {
+
+	}
+
+	&__title {
+		text-align: center;
+
+		span {
+			color: rgb(var(--accent));
+			font-weight: 400;
+		}
+	}
+
+	&__items {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		align-content: start;
+		grid-gap: 30px;
+		
+		@include media('<=lg') {
+			grid-gap: 20px;
+		}
+		
+		@include media('<=md') {
+			grid-template-columns: repeat(2, 1fr);
+		}
+		
+		@include media('<=xxs') {
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__item {
+		grid-column: span 1;
+	}
+}
