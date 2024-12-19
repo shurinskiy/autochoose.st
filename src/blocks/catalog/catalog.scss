@@ -18,12 +18,13 @@
 	&__top {
 		display: flex;
 		align-items: center;
+		gap: 20px;
 
 		h2 {
 			color: #fff;
 			font-size: 24px;
 			font-family: "BS", sans-serif;
-			padding-right: 20px;
+			margin-right: auto;
 
 			@include media('<=sm') {
 				display: none;
@@ -31,8 +32,7 @@
 		}
 	}
 
-	&__add {
-		margin-left: auto;
+	&__button {
 
 		&.button {
 			font-size: 22px;
@@ -79,7 +79,6 @@
 			z-index: 12;
 			right: -400px; top: 0;
 			max-width: 400px;
-			// width: calc(100% - 40px);
 			width: 100%;
 			border-left: 1px solid rgb(var(--accent));
 			transition: right 0.3s ease-out;
@@ -89,10 +88,10 @@
 				right: 0;
 			}
 			
-			@include media('<=xxs') {
-				width: calc(100% - 40px);
-				right: calc(-100% + 40px);
+			@include media('<=400px') {
+				right: -100%;
 				padding: 60px 0 20px 20px;
+				border-color: transparent;
 			}
 		}
 	}
@@ -103,10 +102,11 @@
 		background: svg-url('<svg xmlns="http://www.w3.org/2000/svg" width="6" height="24" viewBox="0 0 6 24"><defs><style>.aside{fill:#111111;fill-rule:evenodd;}</style></defs><circle class="aside" cx="3" cy="3" r="3"/><circle class="aside" cx="3" cy="12" r="3"/><circle class="aside" cx="3" cy="21" r="3"/></svg>') left 16px center / auto no-repeat rgb(var(--accent));
 		width: 30px;
 		height: 50px;
-		right: 100%;
+		left: -1px;
 		z-index: -1;
 		top: calc(50% - 25px);
-		border-radius: 100px 0 0 100px;
+		transform: translateX(-30px);
+			border-radius: 100px 0 0 100px;
 		display: none;
 
 		@include media('<=sm') {
