@@ -8,12 +8,26 @@ import ymaps from 'ymaps';
 		const map = new maps.Map(footer_map, {
 			center: [53.908389, 27.454249],
 			zoom: 16,
-			controls: ['zoomControl'],
+			controls: [],
 		},{
 			zoomControlPosition: { right: '5%', top: 100 },
 			zoomControlFloat: 'none',
 			searchControlProvider: 'yandex#search'
 		});
+
+		const zoomControl = new maps.control.ZoomControl({
+			options: {
+				size: 'small',
+				float: 'none',
+				position: { bottom: 10, right: 10 }
+			}
+		});
+
+		const fullscreenControl = new maps.control.FullscreenControl({
+			options: {
+				position: { top: 10, right: 10 }
+			}
+		});		
 
 		const myPlacemark = new maps.Placemark([53.908389, 27.454249], {
 			balloonContentHeader: "Салон продажи автомобилей",
@@ -24,6 +38,8 @@ import ymaps from 'ymaps';
 			preset: 'islands#blueGovernmentIcon'
 		});
 
+		map.controls.add(zoomControl);
+		map.controls.add(fullscreenControl);
 		map.behaviors.disable('scrollZoom');
 		map.geoObjects.add(myPlacemark);
 
